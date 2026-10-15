@@ -1,0 +1,61 @@
+==========================================================================
+VALIDACIÓN DEL MODELO · arquitectura.archimate
+==========================================================================
+Elementos: 122 · Relaciones: 252 · Vistas: 13
+
+[1] Cada elemento está en la capa (carpeta de Archi) que le corresponde
+  [OK]    122 elementos revisados; fuera de su capa: 0
+  [OK]    Capa business: 26 elementos en el modelo actual · 29 en el objetivo
+  [OK]    Capa application: 29 elementos en el modelo actual · 29 en el objetivo
+  [OK]    Capa technology: 11 elementos en el modelo actual · 11 en el objetivo
+  [OK]    Las hojas de cálculo están modeladas como componentes de aplicación: 3
+
+[2] Toda aplicación del modelo actual existe en la organización
+        Sistema comercial (catastro, facturación y cobranza)           <- arquitectura-actual §2 · FICHA §C
+        SCADA de plantas y reservorios                                 <- arquitectura-actual §2 · FICHA §C
+        Micromedición y lectura (terminales portátiles)                <- arquitectura-actual §2 · FICHA §C
+        SIAF y patrimonio (MEF)                                        <- arquitectura-actual §2 · FICHA §C
+        Atención de reclamos (formulario web)                          <- arquitectura-actual §2 · FICHA §C
+        Hoja de cálculo · Conciliación catastro–facturación (mensual)  <- arquitectura-actual §2 (hoja de cálculo)
+        Hoja de cálculo · Libro de reclamos                            <- arquitectura-actual §2 (hoja de cálculo · Reclamos) · AR02
+        Hoja de cálculo · Indicadores para SUNASS                      <- arquitectura-actual §2 (hoja de cálculo)
+        Sistema de planilla                                            <- arquitectura-actual §5 y AR02 (entidad Trabajador)
+        AIRHSP del MEF                                                 <- arquitectura-actual §5 y AR02 (entidad Trabajador)
+        Biométrico                                                     <- arquitectura-actual §5 y AR02 (entidad Trabajador)
+  [OK]    11 aplicaciones actuales; sin respaldo documental: 0
+  [OK]    Cada elemento objetivo declara su origen (trazabilidad): sin origen: 0
+
+[3] Cada brecha de AR03_brechas.csv se señala en el modelo actual y en el objetivo
+  [OK]    B01 [Datos     ] actual: 2 elemento(s) · objetivo: 2 elemento(s) · Lectura sin fuente autoritativa; archivo de …
+  [OK]    B02 [Datos     ] actual: 1 elemento(s) · objetivo: 1 elemento(s) · Conexión/usuario con discrepancia catastro–f…
+  [OK]    B03 [Datos     ] actual: 1 elemento(s) · objetivo: 1 elemento(s) · Reclamo en 4 fuentes (formulario, libro, com…
+  [OK]    B04 [Datos     ] actual: 1 elemento(s) · objetivo: 1 elemento(s) · Trabajador: 58 por servicios no figuran en e…
+  [OK]    B05 [Datos     ] actual: 2 elemento(s) · objetivo: 1 elemento(s) · Sin inventario de activos de TI ni de servic…
+  [OK]    B06 [Datos     ] actual: 3 elemento(s) · objetivo: 1 elemento(s) · Sin registro de tratamiento de datos persona…
+  [OK]    B07 [Aplicación] actual: 1 elemento(s) · objetivo: 1 elemento(s) · Integración micromedición→comercial por arch…
+  [OK]    B08 [Aplicación] actual: 1 elemento(s) · objetivo: 1 elemento(s) · Integración comercial→SIAF manual (digitació…
+  [OK]    B09 [Aplicación] actual: 2 elemento(s) · objetivo: 1 elemento(s) · Atención de reclamos en formulario web + hoj…
+  [OK]    B10 [Aplicación] actual: 1 elemento(s) · objetivo: 1 elemento(s) · Conciliación catastro–facturación en hoja de…
+  [OK]    B11 [Aplicación] actual: 1 elemento(s) · objetivo: 1 elemento(s) · Indicadores para SUNASS en hoja de cálculo (…
+  [OK]    B12 [Tecnología] actual: 2 elemento(s) · objetivo: 2 elemento(s) · Red industrial (SCADA) sin segmentación; uni…
+  [OK]    B13 [Tecnología] actual: 1 elemento(s) · objetivo: 2 elemento(s) · Respaldos solo a disco local; restauración n…
+  [OK]    B14 [Negocio   ] actual: 1 elemento(s) · objetivo: 2 elemento(s) · Comité de Gobierno Digital sin actas; Líder …
+  [OK]    B15 [Negocio   ] actual: 1 elemento(s) · objetivo: 2 elemento(s) · Sin política de seguridad de la información …
+
+[4] Cifras para la sección 5 y la lista de comprobación 3.2
+  [OK]    #5  Entidades en AR02: 8 (mínimo 6)
+        Entidades sin fuente autoritativa: 5 de 8 -> Lectura de medidor, Activo de TI, Servicio digital / contrato TI, Nodo de red industrial (SCADA), Indicador operativo para SUNASS
+        Fuente declarada pero no validada: 1 -> Reclamo comercial
+        Dueño solo «de facto» (sin designación formal): 2 -> Activo de TI, Servicio digital / contrato TI
+        Entidades con datos personales: 3 -> Conexión y usuario, Reclamo comercial, Trabajador / personal
+        Procesos sin soporte o con soporte deficiente: 5 de 9
+          - Parcial: P1, P3
+          - Deficiente: P2, P4, P7, P8
+          - Bueno: P5, P6
+          - Sin soporte: P9
+  [OK]    #9  Brechas en AR03: 15 (mínimo 10)
+  [OK]    #10 Paquetes de trabajo en el modelo: 8
+  [OK]    #12 Vistas en el modelo: 13 (mínimo 3 a exportar en PNG)
+
+==========================================================================
+RESULTADO: todas las comprobaciones pasaron.
