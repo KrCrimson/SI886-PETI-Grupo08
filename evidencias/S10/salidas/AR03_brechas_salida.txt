@@ -1,0 +1,50 @@
+﻿=== RESUMEN POR CAPA Y TIPO DE BRECHA ===
+capa        tipo_brecha   
+Aplicaci¾n  Nuevo             2
+            Reemplazar        3
+Datos       Consolidar        3
+            Nuevo             2
+            Nuevo + Migrar    1
+Negocio     Nuevo             2
+TecnologÝa  Modificar         2
+
+Brechas totales: 15
+Esfuerzo alto:  3 | medio: 7 | bajo:  5
+
+=== PAQUETES DE TRABAJO (insumo del portafolio Secci¾n 7) ===
+
+PT-01 Gobierno del dato maestro (lecturas y conexi¾n)
+   brechas: 2 | esfuerzo mßx: 3 | dependencias externas: ninguna
+
+PT-02 Trazabilidad del ciclo comercial
+   brechas: 3 | esfuerzo mßx: 3 | dependencias externas: API de carga micromedici¾n, Maestro de conexi¾n/usuario
+
+PT-03 Gesti¾n de reclamos integrada
+   brechas: 2 | esfuerzo mßx: 2 | dependencias externas: Maestro de conexi¾n/usuario, PT-01 Maestro de lecturas
+
+PT-04 Segmentaci¾n de red industrial
+   brechas: 1 | esfuerzo mßx: 3 | dependencias externas: ninguna
+
+PT-05 Continuidad y respaldo
+   brechas: 1 | esfuerzo mßx: 2 | dependencias externas: ninguna
+
+PT-06 Tablero regulatorio SUNASS
+   brechas: 1 | esfuerzo mßx: 2 | dependencias externas: Maestro de lecturas; maestro reclamo
+
+PT-07 Cumplimiento de datos personales
+   brechas: 2 | esfuerzo mßx: 1 | dependencias externas: ninguna
+
+PT-08 Gobierno digital y seguridad
+   brechas: 3 | esfuerzo mßx: 1 | dependencias externas: ninguna
+
+=== SECUENCIA OBLIGADA POR DEPENDENCIAS ===
+  1. PT-01 Gobierno del dato maestro       (prerequisito de PT-02, PT-03 y PT-06)
+  2. PT-04 Segmentaci¾n de red industrial  (riesgo crÝtico; independiente)
+  3. PT-08 Gobierno digital y seguridad    (habilitador institucional; independiente)
+  4. PT-05 Continuidad y respaldo          (independiente; esfuerzo medio)
+  5. PT-02 Trazabilidad del ciclo comercial (depende de PT-01)
+  6. PT-03 Gesti¾n de reclamos integrada   (depende de PT-01)
+  7. PT-07 Cumplimiento datos personales   (depende de PT-01)
+  8. PT-06 Tablero regulatorio SUNASS      (depende de PT-01, PT-02 y PT-03)
+
+==> Esta secuencia condiciona la hoja de ruta (Seccion 7.3).
